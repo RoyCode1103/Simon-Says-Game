@@ -15,19 +15,19 @@ body{
     justify-content: center;
 }
 
-#red{
+.red{
     background-color: red;
 }
 
-#blue{
+.blue{
     background-color: blue;
 }
 
-#orange{
+.orange{
     background-color: orange;
 }
 
-#violet{
+.violet{
     background-color: violet;
 }
 

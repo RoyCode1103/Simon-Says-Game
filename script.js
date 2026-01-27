@@ -1,11 +1,13 @@
 let gameSeq = [];
 let userSeq = [];
 
+let buttons = ["red","orange","blue","violet"]
+
 let started = false;
 let level = 0;
 
 let h3 = document.querySelector("h3");
-let button = document.querySelectorAll(".button");
+// let button = document.querySelectorAll(".button");
 
 document.addEventListener("keypress",function(){
     if(started == false){
@@ -13,41 +15,26 @@ document.addEventListener("keypress",function(){
         started = true;
 
         levelUp();
-    }
-    
+    } 
 });
 
 function btnFlash(button){
     button.classList.add("flash");
+    console.log("Flashing",button);
     setTimeout(function(){
         button.classList.remove("flash");
-    },1000);
+    },250);
 }
 
 function levelUp(){
     level++;
     h3.innerText = `Level ${level}`;
 
-    btnFlash();
+    let ranIdx = Math.floor(Math.random()*buttons.length);
+    let randCol = buttons[ranIdx];
+    let randBtn = document.querySelector(`.${randCol}`);
+    console.log(ranIdx);
+    console.log(randCol);
+    console.log(randBtn);
+    btnFlash(randBtn);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for(but of button){
-//     but.addEventListener("click",function(){
-//     console.log("Button was clicked");
-// });
-// }
