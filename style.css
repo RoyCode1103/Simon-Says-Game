@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+}
+
+.button{
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 1.25rem;
+    margin: 1.5rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#violet{
+    background-color: violet;
+}
