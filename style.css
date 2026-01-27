@@ -5,7 +5,7 @@ body{
 .button{
     height: 200px;
     width: 200px;
-    border: 5px solid black;
+    border: 0.5rem solid black;
     border-radius: 1.25rem;
     margin: 1.5rem;
 }
