@@ -5,6 +5,7 @@ let started = false;
 let level = 0;
 
 let h3 = document.querySelector("h3");
+let button = document.querySelectorAll(".button");
 
 document.addEventListener("keypress",function(){
     if(started == false){
@@ -16,9 +17,18 @@ document.addEventListener("keypress",function(){
     
 });
 
+function btnFlash(button){
+    button.classList.add("flash");
+    setTimeout(function(){
+        button.classList.remove("flash");
+    },1000);
+}
+
 function levelUp(){
     level++;
     h3.innerText = `Level ${level}`;
+
+    btnFlash();
 }
 
 
@@ -35,9 +45,9 @@ function levelUp(){
 
 
 
-let button = document.querySelectorAll(".button");
-for(but of button){
-    but.addEventListener("click",function(){
-    console.log("Button was clicked");
-});
-}
+
+// for(but of button){
+//     but.addEventListener("click",function(){
+//     console.log("Button was clicked");
+// });
+// }
