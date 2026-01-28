@@ -40,12 +40,30 @@ function levelUp(){
     let ranIdx = Math.floor(Math.random()*buttons.length);
     let randCol = buttons[ranIdx];
     let randBtn = document.querySelector(`.${randCol}`);
+    gameSeq.push(randCol);
+    console.log(gameSeq);
     gameFlash(randBtn);
+}
+
+function checkAns(){
+    // console.log("Current level ", level);
+    let idx = level-1;
+
+    if(userSeq[idx]===gameSeq[idx]){
+        console.log("Same value");
+    }else{
+        h3.innerText = "Wrong Sequence, Game Over! Press any key to start";
+    }
 }
 
 function btnPress(){
     let btn = this;
     userFlash(btn);
+
+    userColor = btn.getAttribute("id");
+    userSeq.push(userColor);
+
+    checkAns();
 }
 
 let allBtns = document.querySelectorAll(".button");
