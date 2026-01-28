@@ -33,8 +33,5 @@ function levelUp(){
     let ranIdx = Math.floor(Math.random()*buttons.length);
     let randCol = buttons[ranIdx];
     let randBtn = document.querySelector(`.${randCol}`);
-    console.log(ranIdx);
-    console.log(randCol);
-    console.log(randBtn);
     btnFlash(randBtn);
 }
