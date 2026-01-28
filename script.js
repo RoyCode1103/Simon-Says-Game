@@ -1,13 +1,12 @@
 let gameSeq = [];
 let userSeq = [];
 
-let buttons = ["red","orange","blue","violet"]
+let buttons = ["red","orange","blue","violet"];
 
 let started = false;
 let level = 0;
 
 let h3 = document.querySelector("h3");
-// let button = document.querySelectorAll(".button");
 
 document.addEventListener("keypress",function(){
     if(started == false){
@@ -34,4 +33,14 @@ function levelUp(){
     let randCol = buttons[ranIdx];
     let randBtn = document.querySelector(`.${randCol}`);
     btnFlash(randBtn);
+}
+
+function btnPress(){
+    let btn = this;
+    btnFlash(btn);
+}
+
+let allBtns = document.querySelectorAll(".button");
+for(btn of allBtns){
+    btn.addEventListener("click",btnPress);
 }
