@@ -52,7 +52,7 @@ function checkAns(){
     if(userSeq[idx]===gameSeq[idx]){
         console.log("Same value");
     }else{
-        h3.innerText = "Wrong Sequence, Game Over! Press any key to start";
+        h3.innerText = "Game Over! Press any key to start";
     }
 }
 
