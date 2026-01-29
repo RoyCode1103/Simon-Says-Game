@@ -19,7 +19,6 @@ document.addEventListener("keypress",function(){
 
 function gameFlash(button){
     button.classList.add("flash");
-    console.log("Flashing",button);
     setTimeout(function(){
         button.classList.remove("flash");
     },250);
@@ -27,7 +26,6 @@ function gameFlash(button){
 
 function userFlash(button){
     button.classList.add("userflash");
-    console.log("Flashing",button);
     setTimeout(function(){
         button.classList.remove("userflash");
     },250);
@@ -53,7 +51,7 @@ function checkAns(idx){
             setTimeout(levelUp,1000);
         }
     }else{
-        h3.innerText = "Game Over! Press any key to start";
+        h3.innerHTML = `Game Over! Your Score was <b>${level}</b><br>Press any key to start`;
         reset();
     }
 }
