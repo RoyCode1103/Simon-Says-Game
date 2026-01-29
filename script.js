@@ -54,6 +54,7 @@ function checkAns(idx){
         }
     }else{
         h3.innerText = "Game Over! Press any key to start";
+        reset();
     }
 }
 
@@ -70,4 +71,11 @@ function btnPress(){
 let allBtns = document.querySelectorAll(".button");
 for(btn of allBtns){
     btn.addEventListener("click",btnPress);
+}
+
+function reset(){
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
