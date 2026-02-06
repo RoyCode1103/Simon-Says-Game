@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
 
 h1{
@@ -13,7 +14,7 @@ h1{
     border: 0.5rem solid black;
     border-radius: 1.25rem;
     margin: 1.5rem;
-    box-shadow: 0 5px 15px blue;
+    box-shadow: 0 5px 15px rgb(28,28,28,0.8);
 }
 
 .container{
